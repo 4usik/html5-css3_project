@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400|Raleway:300,400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400|Raleway:300,400,700,800|Roboto:300,400i,500,700');
 
 /*font-family: 'Montserrat', sans-serif;
-font-family: 'Raleway', sans-serif;
+font-family: 'Raleway', sans-serif;*/
 
-block-name__elem-name_mod-name_mod-val*/
+/*block-name__elem-name_mod-name_mod-val*/
 
 * {
     box-sizing: border-box;
@@ -12,19 +12,30 @@ block-name__elem-name_mod-name_mod-val*/
 .container {
     width: 1920px;
     margin: 0 auto;
+	position: relative;
 /*	outline: 5px solid black;*/
 }
 
 
 /*-----header-----*/
 .header {
-    padding: 40px 360px 0 150px;
-    float: left;
+    padding: 40px 0 0 375px;
+    position: absolute;
+	display: flex;
     /* background-color: #453555; */
 }
 
 .header__logo {
-    margin: 0 0 0 225px;
+    margin: 0;
+	fill: #ffffff;
+}
+
+.header__logo:hover {
+	fill: #c7b299;
+}
+
+.header__logo:active {
+	fill: #ffffff;
 }
 
 a {
@@ -33,7 +44,6 @@ a {
 
 .header__nav {
 	padding: 20px 0 0 0;
-	float: right;
 	display: flex;
 }
 
@@ -113,14 +123,14 @@ a {
 
 
 
-
 /*-----main-----*/
 
 /*-----carousel-----*/
 .carousel {
-    padding: 150px 150px 30px 150px;
-    background: url(../img/bgi-template.jpg) 0 0 no-repeat;  /* bg-carousel-filter.png*/
+    padding: 150px 150px 42px 150px;
+    background: url(../img/bgi-template.jpg) 0 0 no-repeat;
     width: 100%;
+	text-align: center;
 }
 
 .slide__contents{
@@ -215,17 +225,12 @@ a {
     fill: #ffffff;
 }
 
-.carousel__indicators {
-    text-align: center;
-}
-
 .carousel__indicator {
     margin: -10px 5px 0 0;
     padding: 10px;
     font-size: 0;
     list-style-type: none;
     background: url(../img/carousel-indicator.png) center center no-repeat;
-    display: inline-block;
 }
 
 .carousel__indicator:hover {
@@ -233,7 +238,8 @@ a {
 }
 
 .carousel__indicator:active,
-.carousel__indicator:focus {
+.carousel__indicator:focus,
+.carousel__indicator:visited {
     background: url(../img/carousel-indicator-active.png) center center no-repeat;
 }
 
@@ -659,7 +665,7 @@ a {
 /*-----mobile-devices-----*/
 .mobile-devices {
 	margin: 175px 0;
-	padding: 195px 385px 0 870px;
+	padding: 195px 0 0 870px;
 	background: url(../img/bg-for-mobile-devices.png) 425px 80px no-repeat #fbfaf8;
 }
 
@@ -672,6 +678,7 @@ a {
 
 .mobile-devices__txt {
 	margin: 40px 0 45px 0;
+	width: 65%;
 	color: #8c8c8c;
 	font-family: Montserrat;
 	font-size: 16px;
